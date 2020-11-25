@@ -32,9 +32,13 @@ pipeline {
 
     stage('3. Deploy') {
       steps {
-        echo 'Esta concluida la construcción'
+        echo 'Esta concluida la construcciÃ³n'
       }
     }
 
+  }
+  environment {
+    ChromeDriverPath = 'C:\\Driver\\Path\\Chrome'
+    driverManager_type = 'CHROME'
   }
 }
