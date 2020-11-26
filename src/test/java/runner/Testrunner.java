@@ -16,8 +16,8 @@ import java.util.logging.Logger;
 @CucumberOptions(
                  features = "src/test/java/features",
                  glue = ("seleniumgluecode"),
-                 plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},
-                 //plugin = {"json:test/report/cucumber_report.json"},
+                 //plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json"},
+                 plugin = {"json:test/report/cucumber_report.json"},
                  snippets = SnippetType.CAMELCASE,
                  tags = {"@producto"}
 
