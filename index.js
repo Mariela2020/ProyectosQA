@@ -3,7 +3,7 @@ const report = require('multiple-cucumber-html-reporter');
 report.generate({
     jsonDir: './test/report/',
     reportPath: './test/report/',
-    openReportInBrowser: false,
+    openReportInBrowser: true,
     metadata:{
         browser: {
             name: 'chrome',
@@ -21,8 +21,8 @@ report.generate({
             {label: 'Project', value: 'TOCTOC Gestión Corredora'},
             {label: 'Release', value: '1.2.3'},
             {label: 'Cycle', value: 'B11221.34321'},
-            {label: 'Execution Start Time', value: 'Ago 11th 2020, 19:28 PM'},
-            {label: 'Execution End Time', value: 'Ago 11th 2020, 19:28 PM'}
+            {label: 'Execution Start Time', value: 'Nov 26th 2020, 19:28 PM'},
+            {label: 'Execution End Time', value: 'Nov 26th 2020, 19:28 PM'}
         ]
     }
 });
