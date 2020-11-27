@@ -20,7 +20,7 @@ import java.util.logging.Logger;
                  snippets = SnippetType.CAMELCASE,
                  tags = {"@producto"}
 
-)
+                )
 
 public class Testrunner {
 
