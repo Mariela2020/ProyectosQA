@@ -33,6 +33,7 @@ public class Hooks {
         LOGGER.log(Level.INFO, "Generando reporte...");
         Properties properties = new Properties();
         properties.load(new FileReader("src/test/resources/config.properties"));
+        //properties.replace("driverManager_type","CHROME", "FIREFOX");
         driverManager = DriverManagerFactory.getManager(DriverType.valueOf(properties.getProperty("driverManager_type")));
         //driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
         LOGGER.log(Level.INFO, "Test run:" + driverManager);
