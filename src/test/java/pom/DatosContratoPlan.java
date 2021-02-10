@@ -100,7 +100,7 @@ public class DatosContratoPlan extends BasePage{
      public void typeDatosContratosplanpaso1() throws Exception {
         Thread.sleep(1000);
         this.click(radiopersona);
-        // this.click(radiofactura);
+        //this.click(radiofactura);
         this.click(radioboleta);
         //Thread.sleep(1000);
         type("Prueba de Flujo plan", By.id("razonSocial"));

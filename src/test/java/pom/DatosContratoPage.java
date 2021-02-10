@@ -152,7 +152,7 @@ public class DatosContratoPage extends BasePage{
     }
 
       public void ClickOnbtnContinuar() throws Exception {
-         this.click(btnContinuar);
+       //  this.click(btnContinuar);
       }
 
 

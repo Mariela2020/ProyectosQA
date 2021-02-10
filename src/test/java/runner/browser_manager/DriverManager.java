@@ -17,17 +17,14 @@ public abstract class DriverManager {
         if (driver != null){
             driver.quit();
             driver = null;
-
         }
     }
 
     public WebDriver getDriver()  {
         if(driver == null) {
             createDriver();
-
         }
         return driver;
-
         }
     }
 
