@@ -61,10 +61,7 @@ public class DriverManagerFactory {
                 }
                 //var chromeDriver = new RemoteWebDriver(new URL("http://192.168.42.189:30001"), new ChromeOptions());
                 //driver.set(new RemoteWebDriver(new URL("http://172.17.0.7:5555"), new ChromeOptions()));
-               //// driver.set(new RemoteWebDriver(new URL("http://192.168.0.6:5566/wd/hub"), capability));
-                driver.set(new RemoteWebDriver(new URL("http://192.168.42.189:30001/wd/hub"), capability));
-              //  driver.set(new RemoteWebDriver(new URL("http://172.17.0.7:5555/wd/hub"), capability));
-                //driver.set(new RemoteWebDriver(new URL("http://172.17.0.7:5555"), new ChromeOptions()));
+                driver.set(new RemoteWebDriver(new URL("http://localhost:30001/wd/hub"), capability));
                 //driver.set(new ChromeDriver());
 
                 break;
