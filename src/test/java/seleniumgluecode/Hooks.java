@@ -46,7 +46,7 @@ public class Hooks {
        // //properties.replace("driverManager_type","CHROME", "FIREFOX");
         //driverManager = DriverManagerFactory.getManager(DriverType.valueOf(properties.getProperty("driverManager_type")));
         //driverManager = DriverManagerFactory.getManager(DriverType.CHROME);
-        DriverManagerFactory.getInstance().setDriver(DriverType.CHROME);
+        DriverManagerFactory.getInstance().setDriver(DriverType.FIREFOX);
 
         driver = DriverManagerFactory.getInstance().getDriver();
 
