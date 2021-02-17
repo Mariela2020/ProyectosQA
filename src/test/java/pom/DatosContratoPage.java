@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+import javax.xml.xpath.XPath;
+
 
 public class DatosContratoPage extends BasePage{
 
@@ -71,7 +73,8 @@ public class DatosContratoPage extends BasePage{
     @FindBy(xpath="//*[@id=\'actualizaInfo\']")
     private WebElement checkactualizaInfo;
 
-   @FindBy(xpath = "//*[@id=\"datosFactura\"]/div[4]/div/button[2]")
+   //@FindBy(xpath = "//*[@id=\"datosFactura\"]/div[4]/div/button[2]")
+   @FindBy(xpath = "/html/body/div[1]/div/div[4]/section/div/form/div[2]/div[5]/div/button[2]")
    private WebElement btnContinuar;
 
     @FindBy(xpath="//*[@id=\"nextStep\"]")
@@ -152,7 +155,7 @@ public class DatosContratoPage extends BasePage{
     }
 
       public void ClickOnbtnContinuar() throws Exception {
-       //  this.click(btnContinuar);
+         this.click(btnContinuar);
       }
 
 

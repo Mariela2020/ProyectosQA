@@ -73,14 +73,14 @@ public class Test extends TestBase{
     }
     @And("^Hace click al botón Enviar$")
     public void darleClickAlBotónEnviar() throws Exception {
-      //  datosContratoPage.ClickOnbtnContinuar();
+        datosContratoPage.ClickOnbtnContinuar();
     }
 
     @Then("^Se debe redireccionar a la página Detalle del contrato y visualizar medio de pago disponibles$")
     public void seDebeRedireccionarALaPáginaDetalleDelContratoYVisualizarMedioDePagoDisponibles() throws Exception {
-       // Assert.assertTrue(detalleContratoPage.istitledetalleDisplayed());
-       // detalleContratoPage.WriteExcelFile();
-       // detalleContratoPage.ClickOnbtnPagar();
+        Assert.assertTrue(detalleContratoPage.istitledetalleDisplayed());
+        detalleContratoPage.WriteExcelFile();
+        detalleContratoPage.ClickOnbtnPagar();
     }
 
   //Scenario (Planes)
