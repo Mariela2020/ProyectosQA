@@ -9,7 +9,7 @@ import org.junit.Assert;
 
 public class Test extends TestBase{
 
-    //Scenario 1 (Producto Marketing)
+    //Scenario (Producto Marketing)
 
     @Given("^El usuario se encuentra en la página de Gestión Corredor y Hace click sobre el botón Productos Marketing$")
     public void elUsuarioSeEncuentraEnLaPáginaDeGestiónCorredorYHaceClickSobreElBotónProductosMarketing() throws Exception {
@@ -36,8 +36,8 @@ public class Test extends TestBase{
 
     @And("^Se debe redireccionar a la página de login$")
     public void seDebeRedireccionarALaPáginaDeLogin() throws Exception {
-        Assert.assertTrue("No se redirrecciono correctamente a la pagina de Login",
-        loginPage.isImagenDisplayed3());
+        //Assert.assertTrue("No se redirrecciono correctamente a la pagina de Login",
+        loginPage.isImagenDisplayed3();
     }
 
     @And("^Ingresa los credenciales del usuario corredor$")
@@ -137,6 +137,37 @@ public class Test extends TestBase{
         detalleContratoPlan.ClickOnbtnmensaje();
         Assert.assertTrue(detallePagoPage.istitledetallepagoDisplayed4());
         }
+
+    //Scenario (Login Home)
+
+    @Given("^El usuario se encuentra en la página de Toctoc y Hace click sobre el mensaje desplegado$")
+    public void elUsuarioSeEncuentraEnLaPáginaDeToctocYHaceClickSobreElMensajeDesplegado() throws Exception {
+        Assert.assertTrue(loginHomePage.istitleDisplayed());
+        loginHomePage.CloseMens();
+    }
+
+    @And("^Se Hacer click al botón Entrar$")
+    public void seHacerClickAlBotónEntrar() {
+         loginHomePage.ClickEntrarLink();
+    }
+
+    @And("^Ingresa los credenciales del usuario$")
+    public void ingresaLosCredencialesDelUsuario()  {
+        loginHomePage.EnterLogin("hurtadomariela2@gmail.com","prueba");
+
+    }
+
+    @When("^Cuando el usuario ingrese la credenciales válida$")
+    public void cuandoElUsuarioIngreseLaCredencialesVálida() throws InterruptedException {
+        loginHomePage.ClickIniciarBtn();
+    }
+
+
+    @Then("^Se debe redireccionar a la página principal y el sistema da la bienvenida al usuario$")
+    public void seDebeRedireccionarALaPáginaPrincipalYElSistemaDaLaBienvenidaAlUsuario() throws Exception {
+        loginHomePage.registroPageIsDisplayed();
+    }
+
 
 }
 

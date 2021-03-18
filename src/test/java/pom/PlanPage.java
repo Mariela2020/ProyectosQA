@@ -18,6 +18,15 @@ public class PlanPage extends BasePage {
     @FindBy (name ="inicia")
     private WebElement planseleccionado;
 
+    @FindBy (name ="crece")
+    private WebElement plancrece;
+
+    @FindBy (name ="acelera")
+    private WebElement planacelera;
+
+    @FindBy (name ="escala")
+    private WebElement planescala;
+
     public boolean isImagenDisplayed6() throws Exception {
         Thread.sleep(2000);
         return this.isDisplayed(tituloplanes) && this.getTitle().equals(titlePage30);
@@ -25,7 +34,7 @@ public class PlanPage extends BasePage {
 
     public void clickOnTarjetaPlan() throws Exception {
         //Thread.sleep(2000);
-        this.click(planseleccionado);
+        this.click(planescala);
     }
 
 

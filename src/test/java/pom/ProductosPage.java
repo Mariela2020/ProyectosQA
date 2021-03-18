@@ -12,10 +12,46 @@ public class ProductosPage extends BasePage {
     private String titlePage = "TOCTOC.com - Productos y servicios para Corredores de propiedades";
 
     @FindBy (xpath="//*[@id=\"vitrina_productos\"]/div/button[1]/div[2]/h4")
-    private WebElement imagentarjeta;
+    private WebElement tarjetapropiedaddestacada;
 
-   @FindBy (xpath="//*[@id=\"vitrina_productos\"]/div/button[1]/div[2]/h4")
+    @FindBy (xpath = "//*[@id=\"vitrina_productos\"]/div/button[3]/div[2]/div/div[2]/a")
+    private WebElement tarjetaapicontacto;
+
+    @FindBy (xpath = "//*[@id=\"vitrina_productos\"]/div/button[1]/div[2]/div/div[2]/a")
+    private  WebElement tarjetaUltimaventas;
+
+    @FindBy (xpath="//*[@id=\"vitrina_productos\"]/div/button[5]/div[2]/div/div[2]/a")
+    private WebElement tarjetabanner;
+
+    @FindBy (xpath = "//*[@id=\"vitrina_productos\"]/div/button[4]/div[2]/div/div[2]/a")
+    private WebElement tarjetapropiedaddestacada1;
+
+    @FindBy (xpath="//*[@id=\"vitrina_productos\"]/div/button[6]/div[2]/div/div[2]/a")
+    private WebElement tarjetaespaciolanding;
+
+
+    @FindBy (xpath = "//*[@id=\"vitrina_productos\"]/div/button[7]/div[2]/div/div[2]/a")
+    private WebElement tarjetamail500;
+
+    @FindBy (xpath = "//*[@id=\"vitrina_productos\"]/div/button[8]/div[2]/div/div[2]/a")
+    private WebElement Tarjetapropdestx5;
+
+    @FindBy (xpath= "//*[@id=\"vitrina_productos\"]/div/button[9]/div[2]/div/div[2]/a")
+    private WebElement tarjetapropdestx15;
+
+    @FindBy (xpath= "//*[@id=\"vitrina_productos\"]/div/button[10]/div[2]/div/div[2]/a")
+    private WebElement tarjetapropdestx30;
+
+    @FindBy (xpath= "//*[@id=\"vitrina_productos\"]/div/button[11]/div[2]/div/div[2]/a")
+    private WebElement tarjetapropdestx60;
+
+    @FindBy (xpath= "//*[@id=\"vitrina_productos\"]/div/button[12]/div[2]/div/div[2]/a")
+    private WebElement tarjetabanner5prop;
+
+   //@FindBy (xpath="//*[@id=\"vitrina_productos\"]/div/button[1]/div[2]/h4")
+    @FindBy (id = "msjCorredor")
     private WebElement productolocator;
+
 
     // @FindBy(linkText = "COMPRAR")
     @FindBy (css = "body > div.fade.modal.show > div > div > div.modal-footer > div:nth-child(2) > a")
@@ -33,7 +69,7 @@ public class ProductosPage extends BasePage {
 
     public void clickOnTarjetaProducto() throws Exception {
         Thread.sleep(2000);
-        this.click(imagentarjeta);
+        this.click(tarjetapropdestx60);
      }
 
     public boolean isImagenDisplayed2() throws Exception {
@@ -41,7 +77,7 @@ public class ProductosPage extends BasePage {
     }
 
     public void ClickOnComprar() throws Exception {
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         this.click(btncomprar);
     }
 

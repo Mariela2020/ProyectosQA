@@ -51,31 +51,32 @@ public class DriverManagerFactory {
         switch (type.toString()) {
             case "CHROME":
                 if (osName.equals("windows")) {
-                    //System.setProperty("webdriver.chrome.driver","src/test/resources/chromedriver/chromedriver.exe");
-                    capability = DesiredCapabilities.chrome();
-                    capability.setBrowserName("chrome");
-                    capability.setPlatform(Platform.ANY);
+                    System.setProperty("webdriver.chrome.driver","src/test/resources/chromedriver/chromedriver.exe");
+                    //capability = DesiredCapabilities.chrome();
+                    //capability.setBrowserName("chrome");
+                    //capability.setPlatform(Platform.ANY);
 
                 } else {
                     System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver");
                 }
                 //var chromeDriver = new RemoteWebDriver(new URL("http://192.168.42.189:30001"), new ChromeOptions());
                 //driver.set(new RemoteWebDriver(new URL("http://172.17.0.7:5555"), new ChromeOptions()));
-                driver.set(new RemoteWebDriver(new URL("http://localhost:30001/wd/hub"), capability));
-                //driver.set(new ChromeDriver());
+               // driver.set(new RemoteWebDriver(new URL("http://localhost:30001/wd/hub"), capability));
+                driver.set(new ChromeDriver());
 
                 break;
 
             case "FIREFOX":
                 if (osName.equals("windows")) {
-                    System.setProperty("webdriver.gecko.driver","src/test/resources/geckodriver/geckodriver.exe");
-                    //capability = DesiredCapabilities.firefox();
-                    //capability.setBrowserName("firefox");
-                    //capability.setPlatform(Platform.ANY);
+                    //System.setProperty("webdriver.gecko.driver","src/test/resources/geckodriver/geckodriver.exe");
+                    capability = DesiredCapabilities.firefox();
+                    capability.setBrowserName("firefox");
+                    capability.setPlatform(Platform.ANY);
                 } else {
                     System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver");
                 }
-                driver.set(new FirefoxDriver());
+                //driver.set(new FirefoxDriver());
+                driver.set(new RemoteWebDriver(new URL("http://localhost:30001/wd/hub"), capability));
                 //driver.set(new RemoteWebDriver(new URL("http://192.168.0.6:5567/wd/hub"), capability));
                 break;
 

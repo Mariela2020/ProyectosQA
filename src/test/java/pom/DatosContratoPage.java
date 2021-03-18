@@ -95,12 +95,13 @@ public class DatosContratoPage extends BasePage{
     }
 
     public void typeDatosContratospaso1() throws Exception {
-         //this.click(radioboleta);
+        //this.click(radioboleta);
         this.click(radiofactura);
         Thread.sleep(1000);
         clear(" ", By.id("razonSocial"));
         type("Prueba de Flujo QA", By.id("razonSocial"));
         clear(" ", By.id("rutFacturacion"));
+        Thread.sleep(1000);
         type("267008469", By.id("rutFacturacion"));
         clear(" ", By.id("nombreFantasia"));
         type("Tuinmueble", By.id("nombreFantasia"));

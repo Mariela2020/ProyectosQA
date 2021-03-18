@@ -20,7 +20,6 @@ import java.util.logging.Logger;
                  plugin = {"json:test/report/cucumber_report.json"},
                  snippets = SnippetType.CAMELCASE,
                  tags = {"@producto"}
-
                 )
 
 public class Testrunner {

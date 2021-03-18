@@ -85,7 +85,8 @@ public class DatosContratoPlan extends BasePage{
     @FindBy (id = "aceptaTerminos")
     private WebElement aceptaTerminos;
 
-    @FindBy (xpath = "//*[@id=\"datosFactura\"]/div[4]/div/button[2]")
+    //@FindBy(className = "btn btn-danger button btn-block")
+    @FindBy (xpath = "//*[@id=\'datosFactura\']/div[4]/div/button[2]/span")
     private WebElement botonenviar;
 
   //  public boolean isImagenDisplayed4() throws Exception {
@@ -100,8 +101,8 @@ public class DatosContratoPlan extends BasePage{
      public void typeDatosContratosplanpaso1() throws Exception {
         Thread.sleep(1000);
         this.click(radiopersona);
-        //this.click(radiofactura);
-        this.click(radioboleta);
+        this.click(radiofactura);
+        //this.click(radioboleta);
         //Thread.sleep(1000);
         type("Prueba de Flujo plan", By.id("razonSocial"));
         type("267008469", By.id("rutFacturacion"));
@@ -138,6 +139,7 @@ public class DatosContratoPlan extends BasePage{
       }
 
     public void ClickOnbtnEnviar() throws Exception {
+        Thread.sleep(2000);
         this.click(botonenviar);
     }
 }

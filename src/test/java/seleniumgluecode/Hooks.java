@@ -21,6 +21,8 @@ public class Hooks {
     static WebDriver driver;
     WebDriverWait waitElement;
     String baseUrl= "https://ww2.toctoc.com/gestioncorredor/";
+    String baseUrl2= "https://ww2.qatoctoc.com/gestioncorredor/";
+    String baseUrl1= "https://www.toctoc.com/";
     private static int numerOfCase = 0;
     private static final Logger LOGGER = LogHelper.getLogger(Hooks.class);
 
@@ -44,13 +46,15 @@ public class Hooks {
         //driver = driverManager.getDriver();
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //driver.navigate().to("https://ww2.toctoc.com/gestioncorredor/");
-       // driver.get("https://ww2.toctoc.com/gestioncorredor/");
+        //driver.get("https://ww2.qatoctoc.com/gestioncorredor/");
 
         driver.get(baseUrl);
         waitElement = new WebDriverWait(driver,15);
        // driver.manage().window().maximize();
 
     }
+
+
 
     @After("@browser")
     public void tearDown(Scenario scenario)  {
@@ -67,6 +71,6 @@ public class Hooks {
 
       public static WebDriver getDriver(){
         return driver;
-        // return driver.get();
+        //return driver.get();
     }
 }
