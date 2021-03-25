@@ -27,8 +27,8 @@ public class RegistroPagePlan extends BasePage {
     @FindBy(id = "password")
     private By password;
 
-    //@FindBy(id = "nextStep")
-    @FindBy(xpath = "//*[@id=\"nextStep\"]")
+    @FindBy(id = "nextStep")
+    //@FindBy(xpath = "//*[@id=\"nextStep\"]")
     private WebElement botonextStep1;
 
 

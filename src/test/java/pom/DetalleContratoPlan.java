@@ -26,7 +26,17 @@ public class DetalleContratoPlan extends BasePage{
     private WebElement detallecontrato;
     private String titlePage5 = "TOCTOC.com Gestión Corredoras";
 
-    @FindBy (xpath="//*[@id=\"app\"]/div/div[4]/section/div/div[4]/div[4]/div/div[2]/span")
+    @FindBy (xpath = "/html/body/div/div/div/div/div/div[2]/div[2]/div[1]/div/div[1]/p[2]")
+    private WebElement productotxt;
+
+    @FindBy (xpath="/html/body/div/div/div/div/div/div[2]/div[2]/div[1]/div/div[2]/h2")
+    private WebElement preciotxt;
+
+    @FindBy(xpath = "/html/body/div/div/div/div/div/div[2]/div[2]/div[2]/div[2]/h2")
+    private WebElement ivatxt;
+
+    //@FindBy (xpath="//*[@id=\"app\"]/div/div[4]/section/div/div[4]/div[4]/div/div[2]/span")
+    @FindBy (xpath="/html/body/div/div/div/div/div/div[2]/div[2]/div[3]/div[2]/p/strong")
     private WebElement resultotaltext1;
 
        @FindBy (xpath = "/html/body/div[3]/div/div/div[3]/a")
@@ -49,10 +59,13 @@ public class DetalleContratoPlan extends BasePage{
     public void WriteExcelFile1() throws Exception {
         String filepath = "src/test/resources/filepath/Test2.xlsx";
         String date = getDate();
+        String producto= getText(productotxt);
+        String precio= getText(preciotxt);
+        String iva= getText(ivatxt);
         String resultText= getText(resultotaltext1);
-        LOGGER.log(Level.INFO, "El valor total del Plan es:" + resultText);
+        LOGGER.log(Level.INFO, "El valor total del Plan es:"+ producto + "  " + resultText);
         readExcel(filepath, "Hoja1");
-        writeExcel(filepath,"Hoja1", resultText + " " + date);
+        writeExcel(filepath,"Hoja1", producto + ";  " + precio +";  " + iva +";  " + resultText + ";  " + date);
         readExcel(filepath,"Hoja1");
     }
 

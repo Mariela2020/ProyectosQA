@@ -79,8 +79,8 @@ public class Test extends TestBase{
     @Then("^Se debe redireccionar a la página Detalle del contrato y visualizar medio de pago disponibles$")
     public void seDebeRedireccionarALaPáginaDetalleDelContratoYVisualizarMedioDePagoDisponibles() throws Exception {
         Assert.assertTrue(detalleContratoPage.istitledetalleDisplayed());
-        detalleContratoPage.WriteExcelFile();
         detalleContratoPage.ClickOnbtnPagar();
+        detalleContratoPage.WriteExcelFile();
     }
 
   //Scenario (Planes)
@@ -132,10 +132,10 @@ public class Test extends TestBase{
     public void seDebeRedireccionarALaPáginaDetalleDelContratoDelPlanAContratar() throws Exception {
         Assert.assertTrue(detalleContratoPlan.istitledetalleDisplayed9());
         detalleContratoPlan.ClickOnlinkverdetalle();
-        detalleContratoPlan.WriteExcelFile1();
         detalleContratoPlan.ClickOnbtnPagar();
         detalleContratoPlan.ClickOnbtnmensaje();
         Assert.assertTrue(detallePagoPage.istitledetallepagoDisplayed4());
+        detalleContratoPlan.WriteExcelFile1();
         }
 
     //Scenario (Login Home)

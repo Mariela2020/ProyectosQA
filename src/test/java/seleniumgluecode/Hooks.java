@@ -47,7 +47,7 @@ public class Hooks {
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //driver.navigate().to("https://ww2.toctoc.com/gestioncorredor/");
         //driver.get("https://ww2.qatoctoc.com/gestioncorredor/");
-
+        driver.get(properties.getProperty("url_base"));
         driver.get(baseUrl);
         waitElement = new WebDriverWait(driver,15);
        // driver.manage().window().maximize();
