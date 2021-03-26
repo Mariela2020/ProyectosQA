@@ -45,7 +45,9 @@ public class DatosContratoPlan extends BasePage{
     private By logoFile;
     //private WebElement logoFile;
 
-    @FindBy (id = "nextStep")
+   // @FindBy(xpath = "//*[@id=\"nextStep\"]")
+    @FindBy(css = "#nextStep")
+   // @FindBy (id = "nextStep")
     private WebElement botonsiguiente;
 
     @FindBy (id = "//*[@id=\\\"datosFactura\\\"]/div[1]/h3[2]")
@@ -82,11 +84,16 @@ public class DatosContratoPlan extends BasePage{
     @FindBy (id = "sameData")
     private By samedata;
 
+    // @FindBy(xpath = "/html/body/div[2]/div/div/div/div/button/span")
+    @FindBy(css = "body > div._hj-widget-container._hj-widget-theme-dark > div > div > div > div > button > span")
+    private WebElement min_hotjar;
+
     @FindBy (id = "aceptaTerminos")
     private WebElement aceptaTerminos;
 
     //@FindBy(className = "btn btn-danger button btn-block")
-    @FindBy (xpath = "//*[@id=\'datosFactura\']/div[4]/div/button[2]/span")
+    @FindBy (css = ".btn-danger")
+   // @FindBy (xpath="//*[@id=\"datosFactura\"]/div[4]/div/button[2]/span")
     private WebElement botonenviar;
 
   //  public boolean isImagenDisplayed4() throws Exception {
@@ -110,8 +117,15 @@ public class DatosContratoPlan extends BasePage{
         type("Giro 3", By.id("giro"));
         type("+56955167469", By.id("telefono"));
        // type("C:\\Users\\dabarzua\\Downloads\\TI\\qrcode.png", By.id("logoFile"));
+
+    }
+
+    public void ClickbtnSiguiente() throws Exception {
+        this.click(min_hotjar);
+        Thread.sleep(2000);
         this.click(botonsiguiente);
     }
+
 
     public void typeDatosContratosplanpaso2() throws Exception {
         type("Mariela Hurtado", By.id("nombreContacto"));

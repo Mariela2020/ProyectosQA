@@ -4,7 +4,7 @@ Feature: Catalogo de Planes
   Como usuario quiero visualizar los planes para contratar un servicio.
 
    @browser
-   Scenario: Ingresar al catologo de planes en la página Gestion Corredor
+   Scenario: Ingresar al catalogo de planes en la página Gestion Corredor
      Given El usuario se encuentra en la página de Gestion Corredor
         And Hace click sobre el botón Ver Planes
         And Visualiza la información del plan seleccionado y hace click al botón Contratar

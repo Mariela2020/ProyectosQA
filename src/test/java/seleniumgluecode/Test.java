@@ -113,6 +113,7 @@ public class Test extends TestBase{
     public void llenaLosFormulariosConLosCamposSolicitados() throws Exception {
         Assert.assertTrue(datosContratoPlan.isImagenDisplayed8());
         datosContratoPlan.typeDatosContratosplanpaso1();
+        datosContratoPlan.ClickbtnSiguiente();
         datosContratoPlan.typeDatosContratosplanpaso2();
         datosContratoPlan.selectDropdownList2();
         datosContratoPlan.selectDropdownList3();

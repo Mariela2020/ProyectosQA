@@ -27,7 +27,11 @@ public class RegistroPagePlan extends BasePage {
     @FindBy(id = "password")
     private By password;
 
-    @FindBy(id = "nextStep")
+    //@FindBy(id = "nextStep")
+    //@FindBy(xpath = "//*[@id=\'nextStep\']")
+    //@FindBy(css = "#nextStep")
+    //@FindBy(css= "[name='registerUser']")
+    @FindBy(name = "registerUser")
     //@FindBy(xpath = "//*[@id=\"nextStep\"]")
     private WebElement botonextStep1;
 
@@ -49,6 +53,7 @@ public class RegistroPagePlan extends BasePage {
     }
 
       public void clickOnextstep() throws Exception {
+        Thread.sleep(2000);
         this.click(botonextStep1);
     }
         

@@ -57,11 +57,11 @@ public class DriverManagerFactory {
                     //capability.setPlatform(Platform.ANY);
 
                 } else {
-                    System.setProperty("webdriver.chrome.driver", driverPath + "chromedriver");
+                    System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver/chromedriver.exe");
                 }
                 //var chromeDriver = new RemoteWebDriver(new URL("http://192.168.42.189:30001"), new ChromeOptions());
                 //driver.set(new RemoteWebDriver(new URL("http://172.17.0.7:5555"), new ChromeOptions()));
-               // driver.set(new RemoteWebDriver(new URL("http://localhost:30001/wd/hub"), capability));
+                //driver.set(new RemoteWebDriver(new URL("http://localhost:30001/wd/hub"), capability));
                 driver.set(new ChromeDriver());
 
                 break;
