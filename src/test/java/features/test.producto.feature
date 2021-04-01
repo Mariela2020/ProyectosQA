@@ -4,7 +4,7 @@ Feature: Catalogo de Productos Marketing
   Como usuario quiero contratar un servicio de un Producto Marketing.
 
   @browser
-  Scenario: Ingresar al catologo de productos Markenting en la página Gestión Corredor y Contratar un servicio
+  Scenario: Ingresar al catalogo de productos Markenting en la página Gestión Corredor y Contratar un servicio
     Given El usuario se encuentra en la página de Gestión Corredor y Hace click sobre el botón Productos Marketing
          And Se debe redireccionar a la página productos
          And Hace click sobre la tarjeta del producto a contratar
